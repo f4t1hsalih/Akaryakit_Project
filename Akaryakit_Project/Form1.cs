@@ -168,28 +168,41 @@ namespace Akaryakit_Project
             return amount;
         }
 
-        private void SatisYap(string petrol, decimal litre, string price)
+        private void SatisYap(string petrol, decimal liter, string price)
         {
             con.Open();
             string command = "insert into tbl_transaction (license_plate, kind_of_petrol, liter, price) values (@p1, @p2, @p3, @p4)";
             SqlCommand cmd = new SqlCommand(command, con);
             cmd.Parameters.AddWithValue("@p1", txtPlaka.Text.ToUpper());
             cmd.Parameters.AddWithValue("@p2", petrol);
-            cmd.Parameters.AddWithValue("@p3", litre);
+            cmd.Parameters.AddWithValue("@p3", liter);
             cmd.Parameters.AddWithValue("@p4", decimal.Parse(price));
             cmd.ExecuteNonQuery();
             con.Close();
-            MessageBox.Show("Satýþ Yapýldý");
 
             KasaDegeriGuncelle(price);
+            DolulukOraniGuncelle(Convert.ToInt16(liter), petrol);
+
+            MessageBox.Show("Satýþ Yapýldý");
         }
 
-        private void KasaDegeriGuncelle(string x)
+        private void KasaDegeriGuncelle(string price)
         {
             con.Open();
             string command = "update tbl_case set amount=amount+@p1";
             SqlCommand cmd = new SqlCommand(command, con);
-            cmd.Parameters.AddWithValue("@p1", decimal.Parse(x));
+            cmd.Parameters.AddWithValue("@p1", decimal.Parse(price));
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        private void DolulukOraniGuncelle(int liter, string kind_of_petrol)
+        {
+            con.Open();
+            string command = "update tbl_petrol set stock=stock-@p1 where kind_of_petrol=@p2";
+            SqlCommand cmd = new SqlCommand(command, con);
+            cmd.Parameters.AddWithValue("@p1", liter);
+            cmd.Parameters.AddWithValue("@p2", kind_of_petrol);
             cmd.ExecuteNonQuery();
             con.Close();
         }
@@ -250,6 +263,7 @@ namespace Akaryakit_Project
                 }
                 Temizle();
                 KasaParasi();
+                DolulukOrani();
             }
             else
             {
@@ -257,5 +271,6 @@ namespace Akaryakit_Project
             }
 
         }
+
     }
 }

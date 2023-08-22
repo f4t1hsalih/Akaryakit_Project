@@ -191,6 +191,7 @@
             // numericUpDown4
             // 
             numericUpDown4.Location = new Point(7, 156);
+            numericUpDown4.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDown4.Name = "numericUpDown4";
             numericUpDown4.Size = new Size(102, 29);
             numericUpDown4.TabIndex = 16;
@@ -199,6 +200,7 @@
             // numericUpDown3
             // 
             numericUpDown3.Location = new Point(7, 122);
+            numericUpDown3.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDown3.Name = "numericUpDown3";
             numericUpDown3.Size = new Size(102, 29);
             numericUpDown3.TabIndex = 15;
@@ -207,6 +209,7 @@
             // numericUpDown2
             // 
             numericUpDown2.Location = new Point(7, 87);
+            numericUpDown2.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDown2.Name = "numericUpDown2";
             numericUpDown2.Size = new Size(102, 29);
             numericUpDown2.TabIndex = 14;
@@ -215,6 +218,7 @@
             // numericUpDown1
             // 
             numericUpDown1.Location = new Point(7, 52);
+            numericUpDown1.Maximum = new decimal(new int[] { 1000, 0, 0, 0 });
             numericUpDown1.Name = "numericUpDown1";
             numericUpDown1.Size = new Size(102, 29);
             numericUpDown1.TabIndex = 13;
@@ -421,6 +425,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = Color.FromArgb(58, 108, 107);
             ClientSize = new Size(744, 296);
             Controls.Add(groupBox4);
@@ -430,7 +435,9 @@
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ForeColor = Color.FromArgb(231, 229, 191);
             Margin = new Padding(4);
+            MaximizeBox = false;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Akaryakıt";
             Load += Form1_Load;
             groupBox1.ResumeLayout(false);
