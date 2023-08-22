@@ -11,6 +11,21 @@ namespace Akaryakit_Project
 
         SqlConnection con = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=krsDbAkaryakit;Integrated Security=True");
 
+        private void Temizle()
+        {
+            numericUpDown1.Value = 0;
+            numericUpDown2.Value = 0;
+            numericUpDown3.Value = 0;
+            numericUpDown4.Value = 0;
+
+            txtKursunsuz95p.Clear();
+            txtMaxDieselp.Clear();
+            txtProDieselp.Clear();
+            txtOtogazp.Clear();
+            txtPlaka.Clear();
+
+        }
+
         private void FiyatListesi()
         {
             con.Open();
@@ -205,6 +220,7 @@ namespace Akaryakit_Project
                 {
                     SatisYap("Gaz Otogaz", numericUpDown4.Value, decimal.Parse(txtOtogazp.Text));
                 }
+                Temizle();
             }
             else
             {
