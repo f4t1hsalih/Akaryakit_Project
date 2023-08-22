@@ -64,6 +64,21 @@ namespace Akaryakit_Project
 
         }
 
+        private void KasaParasi()
+        {
+            con.Open();
+            string command = "select amount from tbl_case";
+            SqlCommand cmd = new SqlCommand(command, con);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            if (dr.Read())
+            {
+                lblCase.Text = dr[0].ToString();
+            }
+            dr.Close();
+            con.Close();
+        }
+
         private void DolulukOrani()
         {
             con.Open();
@@ -172,6 +187,7 @@ namespace Akaryakit_Project
         {
             FiyatListesi();
             DolulukOrani();
+            KasaParasi();
         }
 
         //Noktadan sonraki 3 rakamý görmek için '.ToString("N3")' kullanýldý
