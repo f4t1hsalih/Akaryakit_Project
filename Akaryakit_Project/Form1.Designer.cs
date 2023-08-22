@@ -246,6 +246,7 @@
             btnDepoDoldur.TabIndex = 10;
             btnDepoDoldur.Text = "Depo Doldur";
             btnDepoDoldur.UseVisualStyleBackColor = true;
+            btnDepoDoldur.Click += btnDepoDoldur_Click;
             // 
             // label10
             // 
