@@ -52,16 +52,16 @@
             textBox2 = new TextBox();
             textBox1 = new TextBox();
             groupBox3 = new GroupBox();
-            label14 = new Label();
-            label13 = new Label();
-            label12 = new Label();
-            label11 = new Label();
-            progressBar4 = new ProgressBar();
-            progressBar3 = new ProgressBar();
-            progressBar2 = new ProgressBar();
-            progressBar1 = new ProgressBar();
+            lblOtogazd = new Label();
+            lblProDieseld = new Label();
+            lblMaxDieseld = new Label();
+            lblKursunsuz95d = new Label();
+            pbOtogaz = new ProgressBar();
+            pbProDiesel = new ProgressBar();
+            pbMaxDiesel = new ProgressBar();
+            pbKursunsuz95 = new ProgressBar();
             groupBox4 = new GroupBox();
-            label17 = new Label();
+            lblCase = new Label();
             label16 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -299,112 +299,112 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(label14);
-            groupBox3.Controls.Add(label13);
-            groupBox3.Controls.Add(label12);
-            groupBox3.Controls.Add(label11);
-            groupBox3.Controls.Add(progressBar4);
-            groupBox3.Controls.Add(progressBar3);
-            groupBox3.Controls.Add(progressBar2);
-            groupBox3.Controls.Add(progressBar1);
+            groupBox3.Controls.Add(lblOtogazd);
+            groupBox3.Controls.Add(lblProDieseld);
+            groupBox3.Controls.Add(lblMaxDieseld);
+            groupBox3.Controls.Add(lblKursunsuz95d);
+            groupBox3.Controls.Add(pbOtogaz);
+            groupBox3.Controls.Add(pbProDiesel);
+            groupBox3.Controls.Add(pbMaxDiesel);
+            groupBox3.Controls.Add(pbKursunsuz95);
             groupBox3.Location = new Point(450, 13);
             groupBox3.Margin = new Padding(4);
             groupBox3.Name = "groupBox3";
             groupBox3.Padding = new Padding(4);
-            groupBox3.Size = new Size(257, 203);
+            groupBox3.Size = new Size(281, 203);
             groupBox3.TabIndex = 11;
             groupBox3.TabStop = false;
             groupBox3.Text = "Fullness";
             // 
-            // label14
+            // lblOtogazd
             // 
-            label14.AutoSize = true;
-            label14.Location = new Point(212, 159);
-            label14.Name = "label14";
-            label14.Size = new Size(40, 21);
-            label14.TabIndex = 8;
-            label14.Text = "0,00";
+            lblOtogazd.AutoSize = true;
+            lblOtogazd.Location = new Point(212, 159);
+            lblOtogazd.Name = "lblOtogazd";
+            lblOtogazd.Size = new Size(31, 21);
+            lblOtogazd.TabIndex = 8;
+            lblOtogazd.Text = "***";
             // 
-            // label13
+            // lblProDieseld
             // 
-            label13.AutoSize = true;
-            label13.Location = new Point(212, 125);
-            label13.Name = "label13";
-            label13.Size = new Size(40, 21);
-            label13.TabIndex = 7;
-            label13.Text = "0,00";
+            lblProDieseld.AutoSize = true;
+            lblProDieseld.Location = new Point(212, 125);
+            lblProDieseld.Name = "lblProDieseld";
+            lblProDieseld.Size = new Size(31, 21);
+            lblProDieseld.TabIndex = 7;
+            lblProDieseld.Text = "***";
             // 
-            // label12
+            // lblMaxDieseld
             // 
-            label12.AutoSize = true;
-            label12.Location = new Point(212, 90);
-            label12.Name = "label12";
-            label12.Size = new Size(40, 21);
-            label12.TabIndex = 6;
-            label12.Text = "0,00";
+            lblMaxDieseld.AutoSize = true;
+            lblMaxDieseld.Location = new Point(212, 90);
+            lblMaxDieseld.Name = "lblMaxDieseld";
+            lblMaxDieseld.Size = new Size(31, 21);
+            lblMaxDieseld.TabIndex = 6;
+            lblMaxDieseld.Text = "***";
             // 
-            // label11
+            // lblKursunsuz95d
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(212, 55);
-            label11.Name = "label11";
-            label11.Size = new Size(40, 21);
-            label11.TabIndex = 5;
-            label11.Text = "0,00";
+            lblKursunsuz95d.AutoSize = true;
+            lblKursunsuz95d.Location = new Point(212, 55);
+            lblKursunsuz95d.Name = "lblKursunsuz95d";
+            lblKursunsuz95d.Size = new Size(31, 21);
+            lblKursunsuz95d.TabIndex = 5;
+            lblKursunsuz95d.Text = "***";
             // 
-            // progressBar4
+            // pbOtogaz
             // 
-            progressBar4.Location = new Point(7, 157);
-            progressBar4.Maximum = 10000;
-            progressBar4.Name = "progressBar4";
-            progressBar4.Size = new Size(199, 29);
-            progressBar4.TabIndex = 3;
+            pbOtogaz.Location = new Point(7, 157);
+            pbOtogaz.Maximum = 10000;
+            pbOtogaz.Name = "pbOtogaz";
+            pbOtogaz.Size = new Size(199, 29);
+            pbOtogaz.TabIndex = 3;
             // 
-            // progressBar3
+            // pbProDiesel
             // 
-            progressBar3.Location = new Point(7, 122);
-            progressBar3.Maximum = 10000;
-            progressBar3.Name = "progressBar3";
-            progressBar3.Size = new Size(199, 29);
-            progressBar3.TabIndex = 2;
+            pbProDiesel.Location = new Point(7, 122);
+            pbProDiesel.Maximum = 10000;
+            pbProDiesel.Name = "pbProDiesel";
+            pbProDiesel.Size = new Size(199, 29);
+            pbProDiesel.TabIndex = 2;
             // 
-            // progressBar2
+            // pbMaxDiesel
             // 
-            progressBar2.Location = new Point(7, 87);
-            progressBar2.Maximum = 10000;
-            progressBar2.Name = "progressBar2";
-            progressBar2.Size = new Size(199, 29);
-            progressBar2.TabIndex = 1;
+            pbMaxDiesel.Location = new Point(7, 87);
+            pbMaxDiesel.Maximum = 10000;
+            pbMaxDiesel.Name = "pbMaxDiesel";
+            pbMaxDiesel.Size = new Size(199, 29);
+            pbMaxDiesel.TabIndex = 1;
             // 
-            // progressBar1
+            // pbKursunsuz95
             // 
-            progressBar1.Location = new Point(7, 52);
-            progressBar1.Maximum = 10000;
-            progressBar1.Name = "progressBar1";
-            progressBar1.Size = new Size(199, 29);
-            progressBar1.TabIndex = 0;
+            pbKursunsuz95.Location = new Point(7, 52);
+            pbKursunsuz95.Maximum = 10000;
+            pbKursunsuz95.Name = "pbKursunsuz95";
+            pbKursunsuz95.Size = new Size(199, 29);
+            pbKursunsuz95.TabIndex = 0;
             // 
             // groupBox4
             // 
-            groupBox4.Controls.Add(label17);
+            groupBox4.Controls.Add(lblCase);
             groupBox4.Controls.Add(label16);
             groupBox4.Location = new Point(450, 218);
             groupBox4.Margin = new Padding(4);
             groupBox4.Name = "groupBox4";
             groupBox4.Padding = new Padding(4);
-            groupBox4.Size = new Size(257, 65);
+            groupBox4.Size = new Size(281, 65);
             groupBox4.TabIndex = 12;
             groupBox4.TabStop = false;
             // 
-            // label17
+            // lblCase
             // 
-            label17.AutoSize = true;
-            label17.ForeColor = Color.Black;
-            label17.Location = new Point(64, 27);
-            label17.Name = "label17";
-            label17.Size = new Size(40, 21);
-            label17.TabIndex = 15;
-            label17.Text = "0,00";
+            lblCase.AutoSize = true;
+            lblCase.ForeColor = Color.Black;
+            lblCase.Location = new Point(64, 27);
+            lblCase.Name = "lblCase";
+            lblCase.Size = new Size(40, 21);
+            lblCase.TabIndex = 15;
+            lblCase.Text = "0,00";
             // 
             // label16
             // 
@@ -421,7 +421,7 @@
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(58, 108, 107);
-            ClientSize = new Size(720, 296);
+            ClientSize = new Size(744, 296);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
@@ -467,18 +467,18 @@
         private TextBox textBox1;
         private Button button1;
         private GroupBox groupBox3;
-        private Label label14;
-        private Label label13;
-        private Label label12;
-        private Label label11;
-        private ProgressBar progressBar4;
-        private ProgressBar progressBar3;
-        private ProgressBar progressBar2;
-        private ProgressBar progressBar1;
+        private Label lblOtogazd;
+        private Label lblProDieseld;
+        private Label lblMaxDieseld;
+        private Label lblKursunsuz95d;
+        private ProgressBar pbOtogaz;
+        private ProgressBar pbProDiesel;
+        private ProgressBar pbMaxDiesel;
+        private ProgressBar pbKursunsuz95;
         private Label label15;
         private TextBox textBox9;
         private GroupBox groupBox4;
         private Label label16;
-        private Label label17;
+        private Label lblCase;
     }
 }
