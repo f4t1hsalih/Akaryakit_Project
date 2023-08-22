@@ -91,10 +91,67 @@ namespace Akaryakit_Project
 
         }
 
+        private double FiyatHesaplama(string x)
+        {
+            double petrol, liter, amount;
+
+            if (x == "Kursunsuz95")
+            {
+                petrol = Convert.ToDouble(lblKursunsuz95.Text);
+                liter = Convert.ToDouble(numericUpDown1.Value);
+                amount = petrol * liter;
+            }
+            else if (x == "MaxDiesel")
+            {
+                petrol = Convert.ToDouble(lblMaxDiesel.Text);
+                liter = Convert.ToDouble(numericUpDown2.Value);
+                amount = petrol * liter;
+            }
+            else if (x == "ProDiesel")
+            {
+                petrol = Convert.ToDouble(lblProDiesel.Text);
+                liter = Convert.ToDouble(numericUpDown3.Value);
+                amount = petrol * liter;
+            }
+            else if (x == "Otogaz")
+            {
+                petrol = Convert.ToDouble(lblOtogaz.Text);
+                liter = Convert.ToDouble(numericUpDown4.Value);
+                amount = petrol * liter;
+            }
+            else
+            {
+                return 0;
+            }
+
+            return amount;
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             FiyatListesi();
             DolulukOrani();
+        }
+
+        //Noktadan sonraki 3 rakamý görmek için '.ToString("N3")' kullanýldý
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            txtKursunsuz95p.Text = FiyatHesaplama("Kursunsuz95").ToString("N3");
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            txtMaxDieselp.Text = FiyatHesaplama("MaxDiesel").ToString("N3");
+        }
+
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+            txtProDieselp.Text = FiyatHesaplama("ProDiesel").ToString("N3");
+        }
+
+        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        {
+            txtOtogazp.Text = FiyatHesaplama("Otogaz").ToString("N3");
         }
     }
 }

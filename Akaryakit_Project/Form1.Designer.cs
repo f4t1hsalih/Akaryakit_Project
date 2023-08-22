@@ -38,19 +38,19 @@
             lblKursunsuz95 = new Label();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            numericUpDown4 = new NumericUpDown();
+            numericUpDown3 = new NumericUpDown();
+            numericUpDown2 = new NumericUpDown();
+            numericUpDown1 = new NumericUpDown();
             label15 = new Label();
-            textBox9 = new TextBox();
-            button1 = new Button();
+            txtPlaka = new TextBox();
+            btnDepoDoldur = new Button();
             label10 = new Label();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
+            txtOtogazp = new TextBox();
+            txtProDieselp = new TextBox();
+            txtMaxDieselp = new TextBox();
+            txtKursunsuz95p = new TextBox();
             label9 = new Label();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
             groupBox3 = new GroupBox();
             lblOtogazd = new Label();
             lblProDieseld = new Label();
@@ -65,6 +65,10 @@
             label16 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
             SuspendLayout();
@@ -162,19 +166,19 @@
             // 
             // groupBox2
             // 
+            groupBox2.Controls.Add(numericUpDown4);
+            groupBox2.Controls.Add(numericUpDown3);
+            groupBox2.Controls.Add(numericUpDown2);
+            groupBox2.Controls.Add(numericUpDown1);
             groupBox2.Controls.Add(label15);
-            groupBox2.Controls.Add(textBox9);
-            groupBox2.Controls.Add(button1);
+            groupBox2.Controls.Add(txtPlaka);
+            groupBox2.Controls.Add(btnDepoDoldur);
             groupBox2.Controls.Add(label10);
-            groupBox2.Controls.Add(textBox5);
-            groupBox2.Controls.Add(textBox6);
-            groupBox2.Controls.Add(textBox7);
-            groupBox2.Controls.Add(textBox8);
+            groupBox2.Controls.Add(txtOtogazp);
+            groupBox2.Controls.Add(txtProDieselp);
+            groupBox2.Controls.Add(txtMaxDieselp);
+            groupBox2.Controls.Add(txtKursunsuz95p);
             groupBox2.Controls.Add(label9);
-            groupBox2.Controls.Add(textBox4);
-            groupBox2.Controls.Add(textBox3);
-            groupBox2.Controls.Add(textBox2);
-            groupBox2.Controls.Add(textBox1);
             groupBox2.Location = new Point(221, 13);
             groupBox2.Margin = new Padding(4);
             groupBox2.Name = "groupBox2";
@@ -183,6 +187,38 @@
             groupBox2.TabIndex = 9;
             groupBox2.TabStop = false;
             groupBox2.Text = "Selling";
+            // 
+            // numericUpDown4
+            // 
+            numericUpDown4.Location = new Point(7, 156);
+            numericUpDown4.Name = "numericUpDown4";
+            numericUpDown4.Size = new Size(102, 29);
+            numericUpDown4.TabIndex = 16;
+            numericUpDown4.ValueChanged += numericUpDown4_ValueChanged;
+            // 
+            // numericUpDown3
+            // 
+            numericUpDown3.Location = new Point(7, 122);
+            numericUpDown3.Name = "numericUpDown3";
+            numericUpDown3.Size = new Size(102, 29);
+            numericUpDown3.TabIndex = 15;
+            numericUpDown3.ValueChanged += numericUpDown3_ValueChanged;
+            // 
+            // numericUpDown2
+            // 
+            numericUpDown2.Location = new Point(7, 87);
+            numericUpDown2.Name = "numericUpDown2";
+            numericUpDown2.Size = new Size(102, 29);
+            numericUpDown2.TabIndex = 14;
+            numericUpDown2.ValueChanged += numericUpDown2_ValueChanged;
+            // 
+            // numericUpDown1
+            // 
+            numericUpDown1.Location = new Point(7, 52);
+            numericUpDown1.Name = "numericUpDown1";
+            numericUpDown1.Size = new Size(102, 29);
+            numericUpDown1.TabIndex = 13;
+            numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
             // label15
             // 
@@ -193,23 +229,23 @@
             label15.TabIndex = 12;
             label15.Text = "License Plate:";
             // 
-            // textBox9
+            // txtPlaka
             // 
-            textBox9.Location = new Point(118, 191);
-            textBox9.MaxLength = 11;
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(96, 29);
-            textBox9.TabIndex = 11;
+            txtPlaka.Location = new Point(118, 191);
+            txtPlaka.MaxLength = 11;
+            txtPlaka.Name = "txtPlaka";
+            txtPlaka.Size = new Size(96, 29);
+            txtPlaka.TabIndex = 11;
             // 
-            // button1
+            // btnDepoDoldur
             // 
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(54, 229);
-            button1.Name = "button1";
-            button1.Size = new Size(118, 34);
-            button1.TabIndex = 10;
-            button1.Text = "Depo Doldur";
-            button1.UseVisualStyleBackColor = true;
+            btnDepoDoldur.ForeColor = Color.Black;
+            btnDepoDoldur.Location = new Point(54, 229);
+            btnDepoDoldur.Name = "btnDepoDoldur";
+            btnDepoDoldur.Size = new Size(118, 34);
+            btnDepoDoldur.TabIndex = 10;
+            btnDepoDoldur.Text = "Depo Doldur";
+            btnDepoDoldur.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -220,37 +256,37 @@
             label10.TabIndex = 9;
             label10.Text = "Price";
             // 
-            // textBox5
+            // txtOtogazp
             // 
-            textBox5.Location = new Point(118, 156);
-            textBox5.MaxLength = 10;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(96, 29);
-            textBox5.TabIndex = 8;
+            txtOtogazp.Location = new Point(118, 156);
+            txtOtogazp.MaxLength = 10;
+            txtOtogazp.Name = "txtOtogazp";
+            txtOtogazp.Size = new Size(96, 29);
+            txtOtogazp.TabIndex = 8;
             // 
-            // textBox6
+            // txtProDieselp
             // 
-            textBox6.Location = new Point(118, 122);
-            textBox6.MaxLength = 10;
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(96, 29);
-            textBox6.TabIndex = 7;
+            txtProDieselp.Location = new Point(118, 122);
+            txtProDieselp.MaxLength = 10;
+            txtProDieselp.Name = "txtProDieselp";
+            txtProDieselp.Size = new Size(96, 29);
+            txtProDieselp.TabIndex = 7;
             // 
-            // textBox7
+            // txtMaxDieselp
             // 
-            textBox7.Location = new Point(118, 87);
-            textBox7.MaxLength = 10;
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(96, 29);
-            textBox7.TabIndex = 6;
+            txtMaxDieselp.Location = new Point(118, 87);
+            txtMaxDieselp.MaxLength = 10;
+            txtMaxDieselp.Name = "txtMaxDieselp";
+            txtMaxDieselp.Size = new Size(96, 29);
+            txtMaxDieselp.TabIndex = 6;
             // 
-            // textBox8
+            // txtKursunsuz95p
             // 
-            textBox8.Location = new Point(118, 52);
-            textBox8.MaxLength = 10;
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(96, 29);
-            textBox8.TabIndex = 5;
+            txtKursunsuz95p.Location = new Point(118, 52);
+            txtKursunsuz95p.MaxLength = 10;
+            txtKursunsuz95p.Name = "txtKursunsuz95p";
+            txtKursunsuz95p.Size = new Size(96, 29);
+            txtKursunsuz95p.TabIndex = 5;
             // 
             // label9
             // 
@@ -260,42 +296,6 @@
             label9.Size = new Size(41, 21);
             label9.TabIndex = 4;
             label9.Text = "Liter";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(7, 156);
-            textBox4.MaxLength = 4;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(96, 29);
-            textBox4.TabIndex = 3;
-            textBox4.Text = "0";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(7, 122);
-            textBox3.MaxLength = 4;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(96, 29);
-            textBox3.TabIndex = 2;
-            textBox3.Text = "0";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(7, 87);
-            textBox2.MaxLength = 4;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(96, 29);
-            textBox2.TabIndex = 1;
-            textBox2.Text = "0";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(7, 52);
-            textBox1.MaxLength = 4;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(96, 29);
-            textBox1.TabIndex = 0;
-            textBox1.Text = "0";
             // 
             // groupBox3
             // 
@@ -436,6 +436,10 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox4.ResumeLayout(false);
@@ -461,11 +465,11 @@
         private TextBox textBox7;
         private TextBox textBox8;
         private Label label9;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Button button1;
+        private TextBox txtKursunsuz95p;
+        private TextBox txtMaxDieselp;
+        private TextBox txtProDieselp;
+        private TextBox txtOtogazp;
+        private Button btnDepoDoldur;
         private GroupBox groupBox3;
         private Label lblOtogazd;
         private Label lblProDieseld;
@@ -476,9 +480,13 @@
         private ProgressBar pbMaxDiesel;
         private ProgressBar pbKursunsuz95;
         private Label label15;
-        private TextBox textBox9;
+        private TextBox txtPlaka;
         private GroupBox groupBox4;
         private Label label16;
         private Label lblCase;
+        private NumericUpDown numericUpDown4;
+        private NumericUpDown numericUpDown3;
+        private NumericUpDown numericUpDown2;
+        private NumericUpDown numericUpDown1;
     }
 }
