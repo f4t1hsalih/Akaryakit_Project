@@ -168,7 +168,7 @@ namespace Akaryakit_Project
             return amount;
         }
 
-        private void SatisYap(string petrol, decimal litre, decimal price)
+        private void SatisYap(string petrol, decimal litre, string price)
         {
             con.Open();
             string command = "insert into tbl_transaction (license_plate, kind_of_petrol, liter, price) values (@p1, @p2, @p3, @p4)";
@@ -176,11 +176,22 @@ namespace Akaryakit_Project
             cmd.Parameters.AddWithValue("@p1", txtPlaka.Text.ToUpper());
             cmd.Parameters.AddWithValue("@p2", petrol);
             cmd.Parameters.AddWithValue("@p3", litre);
-            cmd.Parameters.AddWithValue("@p4", price);
+            cmd.Parameters.AddWithValue("@p4", decimal.Parse(price));
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("Satýþ Yapýldý");
 
+            KasaDegeriGuncelle(price);
+        }
+
+        private void KasaDegeriGuncelle(string x)
+        {
+            con.Open();
+            string command = "update tbl_case set amount=amount+@p1";
+            SqlCommand cmd = new SqlCommand(command, con);
+            cmd.Parameters.AddWithValue("@p1", decimal.Parse(x));
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -213,6 +224,7 @@ namespace Akaryakit_Project
 
         private void btnDepoDoldur_Click(object sender, EventArgs e)
         {
+            //Petrol Satýþý
             if (txtPlaka.Text != "")
             {
                 //Ayný anda birkaç deðer girilip girilmediði kontrol ediliyor
@@ -222,26 +234,28 @@ namespace Akaryakit_Project
 
                 else if (numericUpDown1.Value != 0)
                 {
-                    SatisYap("Kurþunsuz 95", numericUpDown1.Value, decimal.Parse(txtKursunsuz95p.Text));
+                    SatisYap("Kurþunsuz 95", numericUpDown1.Value, txtKursunsuz95p.Text);
                 }
                 else if (numericUpDown2.Value != 0)
                 {
-                    SatisYap("Max Diesel", numericUpDown2.Value, decimal.Parse(txtMaxDieselp.Text));
+                    SatisYap("Max Diesel", numericUpDown2.Value, txtMaxDieselp.Text);
                 }
                 else if (numericUpDown3.Value != 0)
                 {
-                    SatisYap("Pro Diesel", numericUpDown3.Value, decimal.Parse(txtProDieselp.Text));
+                    SatisYap("Pro Diesel", numericUpDown3.Value, txtProDieselp.Text);
                 }
                 else if (numericUpDown4.Value != 0)
                 {
-                    SatisYap("Gaz Otogaz", numericUpDown4.Value, decimal.Parse(txtOtogazp.Text));
+                    SatisYap("Gaz Otogaz", numericUpDown4.Value, txtOtogazp.Text);
                 }
                 Temizle();
+                KasaParasi();
             }
             else
             {
                 MessageBox.Show("Lütfen Plakayý Giriniz!");
             }
+
         }
     }
 }
